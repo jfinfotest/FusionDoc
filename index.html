@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <title>Static Documentation Site</title>
+    
+    <!-- Tailwind CSS with Typography Plugin -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // Enable class-based dark mode
+        theme: {
+          extend: {
+            typography: (theme) => ({
+              DEFAULT: {
+                css: {
+                  '--tw-prose-body': theme('colors.gray[700]'),
+                  '--tw-prose-headings': theme('colors.gray[900]'),
+                  '--tw-prose-links': theme('colors.blue[600]'),
+                  '--tw-prose-bold': theme('colors.gray[900]'),
+                  '--tw-prose-invert-body': theme('colors.gray[300]'),
+                  '--tw-prose-invert-headings': theme('colors.gray[100]'),
+                  '--tw-prose-invert-links': theme('colors.blue[400]'),
+                  '--tw-prose-invert-bold': theme('colors.gray[100]'),
+                  // --- START INLINE CODE FIX ---
+                  // Reset default `code` styles from the typography plugin to allow our
+                  // custom `InlineCode` component to apply its styles without conflict.
+                  code: {
+                    fontWeight: 'inherit',
+                    color: 'inherit',
+                  },
+                  'code::before': {
+                    content: '""',
+                  },
+                  'code::after': {
+                    content: '""',
+                  },
+                  // --- END INLINE CODE FIX ---
+                },
+              },
+            }),
+            colors: {
+              primary: {
+                '50': 'rgb(var(--color-primary-50) / <alpha-value>)',
+                '100': 'rgb(var(--color-primary-100) / <alpha-value>)',
+                '200': 'rgb(var(--color-primary-200) / <alpha-value>)',
+                '300': 'rgb(var(--color-primary-300) / <alpha-value>)',
+                '400': 'rgb(var(--color-primary-400) / <alpha-value>)',
+                '500': 'rgb(var(--color-primary-500) / <alpha-value>)',
+                '600': 'rgb(var(--color-primary-600) / <alpha-value>)',
+                '700': 'rgb(var(--color-primary-700) / <alpha-value>)',
+                '800': 'rgb(var(--color-primary-800) / <alpha-value>)',
+                '900': 'rgb(var(--color-primary-900) / <alpha-value>)',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Tabler Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+    
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- Prism.js is now imported as a module in the React components -->
+
+    <!-- Mermaid.js is now imported as a module in the React component -->
+
+    <!-- KaTeX CSS is now imported as a module in the React components -->
+
+    <!-- Chart.js is now imported as a module in the React components -->
+
+    <style>
+      /* Custom scrollbar for webkit browsers */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #2d3748;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      /* Utility to hide scrollbar */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom": "https://aistudiocdn.com/react-dom@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.8.2",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
+    "rehype-prism-plus": "https://aistudiocdn.com/rehype-prism-plus@^2.0.0",
+    "remark-gfm": "https://aistudiocdn.com/remark-gfm@^4.0.0",
+    "rehype-slug": "https://aistudiocdn.com/rehype-slug@^6.0.0",
+    "gray-matter": "https://aistudiocdn.com/gray-matter@^4.0.3",
+    "lunr": "https://aistudiocdn.com/lunr@^2.3.9",
+    "@google/genai": "https://esm.sh/@google/genai@0.14.0",
+    "remark-math": "https://esm.sh/remark-math@6.0.0",
+    "rehype-katex": "https://esm.sh/rehype-katex@7.0.0",
+    "buffer": "https://esm.sh/buffer@6.0.3"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-Bb83nf9H.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/vendor-25QRBUdv.js">
+  <link rel="modulepreload" crossorigin href="/assets/router-jFRij96e.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-BdqeevD-.css">
+</head>
+<body class="bg-white dark:bg-gray-900">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div id="modal-root"></div>
+</body>
+</html>
