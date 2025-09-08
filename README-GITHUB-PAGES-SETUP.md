@@ -11,7 +11,7 @@ Asegúrate de que tu repositorio tenga esta estructura exacta:
 tu-repositorio/
 ├── index.html                    ← DEBE estar en la raíz
 ├── .nojekyll                     ← DEBE estar en la raíz
-├── github-pages-config.js        ← DEBE estar en la raíz
+├── github-pages-config.js        ← DEBE estar en la raíz (mejorado)
 ├── _config.yml                   ← DEBE estar en la raíz
 ├── constants.ts
 ├── favicon.ico
@@ -20,6 +20,7 @@ tu-repositorio/
 │       └── deploy.yml
 ├── assets/
 │   ├── logo.svg                  ← Logo de la aplicación
+│   ├── company-logo.svg          ← Logo de la empresa
 │   └── [todos los archivos CSS/JS]
 ├── docs/
 │   └── [archivos de documentación]
@@ -110,7 +111,7 @@ Asegúrate de que estos archivos existan en la raíz:
 
 - ✅ `index.html` - Página principal
 - ✅ `.nojekyll` - Evita procesamiento Jekyll
-- ✅ `github-pages-config.js` - Maneja rutas base
+- ✅ `github-pages-config.js` - Script mejorado que maneja rutas base y recursos dinámicos
 - ✅ `.github/workflows/deploy.yml` - Workflow de despliegue
 
 ### Comandos de Verificación
