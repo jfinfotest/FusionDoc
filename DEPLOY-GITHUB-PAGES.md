@@ -56,6 +56,8 @@ git push -u origin main
 
 - **`.github/workflows/deploy.yml`**: Workflow de GitHub Actions para despliegue automático
 - **`.nojekyll`**: Evita el procesamiento de Jekyll (ya incluido en tu proyecto)
+- **`_config.yml`**: Configuración adicional para GitHub Pages
+- **`github-pages-config.js`**: Script que maneja las rutas base automáticamente
 - **`index.html`**: Página principal con rutas relativas correctas
 
 ## 🔄 Actualizaciones Automáticas
@@ -85,9 +87,12 @@ Si tienes un dominio personalizado:
 
 ## 🆘 Solución de Problemas
 
-### El sitio no carga correctamente
+### El sitio no carga correctamente o muestra "No se pudo obtener el archivo local index.md"
+- **Problema de rutas base**: Este error ocurre cuando GitHub Pages sirve el sitio desde un subdirectorio (ej: `usuario.github.io/repositorio/`)
+- **Solución incluida**: El archivo `github-pages-config.js` detecta automáticamente si está en GitHub Pages y ajusta las rutas
 - Verifica que todas las rutas en `index.html` sean relativas (sin `/` al inicio)
 - Asegúrate de que el archivo `.nojekyll` esté presente
+- Confirma que `github-pages-config.js` se carga antes que la aplicación principal
 
 ### El workflow falla
 - Revisa los logs en la pestaña **Actions**
@@ -96,6 +101,10 @@ Si tienes un dominio personalizado:
 ### 404 en GitHub Pages
 - Asegúrate de que el archivo `index.html` esté en la raíz del repositorio
 - Verifica que GitHub Pages esté configurado para usar "GitHub Actions" como fuente
+
+### Problemas de carga de archivos docs/
+- El script `github-pages-config.js` intercepta las peticiones fetch y XMLHttpRequest para corregir las rutas automáticamente
+- Si persisten los problemas, verifica en las herramientas de desarrollador del navegador que las rutas se estén resolviendo correctamente
 
 ---
 

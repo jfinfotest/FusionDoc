@@ -1,0 +1,22 @@
+# GitHub Pages configuration
+# Disable Jekyll processing
+markdown: kramdown
+highlighter: rouge
+include:
+  - .nojekyll
+  - github-pages-config.js
+  - assets/
+  - docs/
+
+# Ensure all files are included
+keep_files:
+  - assets
+  - docs
+  - github-pages-config.js
+
+# Disable Jekyll plugins that might interfere
+plugins: []
+
+# Set base URL for GitHub Pages
+baseurl: ""
+url: ""
