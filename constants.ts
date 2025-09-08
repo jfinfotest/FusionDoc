@@ -2,7 +2,7 @@
 export const APP_CONFIG = {
     title: "FusionDoc",
     subtitle: "Next-Gen Documentation",
-    icon: "/assets/logo.svg", // Path in the `/public` folder or a full URL
+    icon: "./assets/logo.svg", // Path in the `/public` folder or a full URL
 };
 
 // --- DOCS SOURCE CONFIGURATION ---
@@ -18,7 +18,7 @@ export const GITHUB_CONFIG = {
     repo: "your-repo-name",         // The name of your repository
     branch: "main",                 // The branch where your docs are
     docsPath: "docs",               // The folder in your repo where docs are stored
-    token: process.env.REACT_APP_GITHUB_TOKEN || '', // Optional: A GitHub token for private repos or to increase rate limits.
+    token: '', // Optional: A GitHub token for private repos or to increase rate limits.
 };
 
 // --- THEME & APPEARANCE ---
@@ -125,7 +125,7 @@ export const ANNOUNCEMENT_BANNER_CONFIG = {
 // --- SIDEBAR BUSINESS/COMPANY INFO ---
 export const SIDEBAR_BUSINESS_INFO_CONFIG = {
     enabled: true,
-    logo: '/assets/company-logo.svg', // Path in `/public` folder
+    logo: './assets/company-logo.svg', // Path in `/public` folder
     title: 'Powered by FusionDoc',
     link: 'https://github.com/cog-creators/fusion-doc',
     footerText: `© {year} Your Company Inc.` // `{year}` will be replaced with the current year
