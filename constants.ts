@@ -116,7 +116,7 @@ export const ANNOUNCEMENT_BANNER_CONFIG = {
     id: "v1-release", // A unique ID for this banner. If you change it, users will see the banner again.
     content: "🎉 We've just launched our new feature! Check it out.",
     link: {
-        href: "/features/new-feature", // Can be an internal or external link
+        href: "./features/new-feature", // Can be an internal or external link
         text: "Learn more",
     },
 };
