@@ -19,6 +19,7 @@ tu-repositorio/
 │   └── workflows/
 │       └── deploy.yml
 ├── assets/
+│   ├── logo.svg                  ← Logo de la aplicación
 │   └── [todos los archivos CSS/JS]
 ├── docs/
 │   └── [archivos de documentación]
