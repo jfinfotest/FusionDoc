@@ -87,6 +87,14 @@ Si tienes un dominio personalizado:
 
 ## 🆘 Solución de Problemas
 
+### ⚠️ Error: "The site configured at this address does not contain the requested file"
+
+**Este es el error más común al configurar GitHub Pages.**
+
+- **Síntoma**: Mensaje de error indicando que no se encuentra `index.html`
+- **Causa**: Los archivos no están en la raíz del repositorio
+- **Solución**: Ver el archivo `README-GITHUB-PAGES-SETUP.md` para instrucciones detalladas paso a paso
+
 ### El sitio no carga correctamente o muestra "No se pudo obtener el archivo local index.md"
 - **Problema de rutas base**: Este error ocurre cuando GitHub Pages sirve el sitio desde un subdirectorio (ej: `usuario.github.io/repositorio/`)
 - **Solución incluida**: El archivo `github-pages-config.js` detecta automáticamente si está en GitHub Pages y ajusta las rutas
